@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Move script to end of body or add defer attribute -->
+    <script src="scripts/app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="title">PRODUCT LIST</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        <div class="weather-widget">
+    <div class="weather-toggle">
+        <button id="toggle-weather">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            <span>Weather</span>
+        </button>
+    </div>
+    <div class="weather-container">
+        <div class="weather-header">
+            <h2>Weather Forecast</h2>
+            <div class="location-input">
+                <input type="text" id="location-input" placeholder="Enter city name">
+                <button id="search-btn">Search</button>
+                <button id="current-location-btn">Use My Location</button>
+            </div>
+        </div>
+        <div class="weather-content">
+            <div class="current-weather">
+                <div class="weather-info">
+                    <h3 id="location">Loading weather...</h3>
+                    <div class="temp-container">
+                        <span id="temperature">--</span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <p id="weather-description">--</p>
+                </div>
+                <div class="weather-icon">
+                    <img id="weather-icon-img" src="image/thermometer_13882839.png" alt="Weather icon">
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span class="label">Humidity</span>
+                    <span id="humidity" class="value">--%</span>
+                </div>
+                <div class="detail">
+                    <span class="label">Wind</span>
+                    <span id="wind-speed" class="value">-- m/s</span>
+                </div>
+                <div class="detail">
+                    <span class="label">Feels Like</span>
+                    <span id="feels-like" class="value">--°C</span>
+                </div>
+            </div>
+            <div class="forecast-container">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast" class="forecast-items">
+                    <!-- Forecast items will be added here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="listProduct">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+</body>
+</html>
